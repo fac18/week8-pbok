@@ -1,0 +1,20 @@
+{
+  "name": "week8-pbok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac18/week8-pbok.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac18/week8-pbok/issues"
+  },
+  "homepage": "https://github.com/fac18/week8-pbok#readme"
+}
