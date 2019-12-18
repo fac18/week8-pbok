@@ -13,18 +13,22 @@ app.use(
     express.static(path.join(__dirname, '..', 'public'), { maxAge: '100d' })
 );
 
-app.get('/resources', (request, response) => {
-    response.render('resources');   
+app.get('/', (request, response) => {
+    response.render('home');
     });
 
-app.post('/resources', (request, response) => {
+app.get('/library', (request, response) => {
+    response.render('library');
+    });
+
+app.post('/resource', (request, response) => {
     let { title, language, description, link } = request.body;
     postData(title, language, description, link, (err, res) => {
         if (err) {
             throw err;
         }
         else {
-        response.redirect('/resources');
+        res.render('/');
         }
 })
 });
