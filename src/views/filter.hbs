@@ -1,0 +1,35 @@
+<form method="POST" action="/filter-language">
+    <select name="language">
+        <option value="" disabled selected>Select a language</option>
+        <option value="">ALL LANGUAGES</option>
+        <option value="CSS">CSS</option>
+        <option value="EXPRESS">EXPRESS</option>
+        <option value="HANDLEBARS">HANDLEBARS</option>
+        <option value="HTML">HTML</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+        <option value="NODE">NODE</option>
+        <option value="REACT">REACT</option>
+        <option value="SQL">SQL</option>
+    </select>
+    <button type="submit">Filter</button>
+</form>
+<table>
+    <tr>
+        <th>Language</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Link</th>
+    </tr>
+
+{{#each filterRows}}
+    <tr>
+        <td>{{language}}</td>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>{{link}}</td>
+    </tr>
+{{/each}}
+
+</table>
+
+
