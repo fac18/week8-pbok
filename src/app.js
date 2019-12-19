@@ -3,7 +3,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
-const controllers = require('./controllers');
+const controllers = require('./controllers/index');
 const helpers = require('./views/helpers/index');
 
 const app = express();
@@ -29,29 +29,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
     express.static(path.join(__dirname, '..', 'public'), { maxAge: '100d' })
 );
-
-// comment this back in after fixing controllers files
-// app.use(controllers);
-
-// below to be moved inside controllers folder
-app.get('/', (request, response) => {
-    response.render('home');
-    });
-
-app.get('/library', (request, response) => {
-    response.render('library');
-    });
-
-app.post('/resource', (request, response) => {
-    let { title, language, description, link } = request.body;
-    postData(title, language, description, link, (err, res) => {
-        if (err) {
-            throw err;
-        }
-        else {
-        res.render('/');
-        }
-})
-});
+app.use(controllers);
 
 module.exports = app;
