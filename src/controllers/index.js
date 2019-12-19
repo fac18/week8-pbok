@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require("path");
 const router = express.Router();
+
 const home = require('./home');
 const library = require('./library');
 const resource = require('./resource');
 const errors = require('./errors');
+const queries = require('../model/queries');
 
 router.get('/', home.get);
 router.get('/library', library.get);
