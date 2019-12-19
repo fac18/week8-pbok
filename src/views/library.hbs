@@ -1,4 +1,4 @@
-<form method="POST" action="/filter-language">
+<form method="POST" action="/filter-language" class="filter-form">
     <select name="language">
         <option value="" disabled selected>Select a language</option>
         <option value="">ALL LANGUAGES</option>
@@ -13,23 +13,21 @@
     </select>
     <button type="submit">Filter</button>
 </form>
-<table>
-    <tr>
-        <th>Language</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Link</th>
+<table class="table">
+    <tr class"table-row">
+        <th class="column">Language</th>
+        <th class="column">Title</th>
+        <th class="column">Description</th>
+        <th class="column">Link</th>
     </tr>
 
 {{#each tableRows}}
     <tr>
-        <td>{{language}}</td>
-        <td>{{title}}</td>
-        <td>{{description}}</td>
-        <td>{{link}}</td>
+        <td class="table-data">{{language}}</td>
+        <td class="table-data">{{title}}</td>
+        <td class="table-data">{{description}}</td>
+        <td class="table-data">{{link}}</td>
     </tr>
 {{/each}}
 
 </table>
-
-
