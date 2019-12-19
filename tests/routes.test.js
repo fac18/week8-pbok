@@ -35,3 +35,14 @@ test("Test 404 error is being served correctly", t => {
             t.end();
         });
 });
+
+test('Testing endpoint /library/:language', t => {
+    request(app)
+        .get('/library/html')
+        .expect(200)
+        .end((err, res) => {
+            t.error(err, 'Error is null');
+            t.equals(res.statusCode, 200, 'Should return a 200 status code');
+            t.end();
+        });
+});

@@ -1,5 +1,3 @@
-const path = require('path');
-const express = require('express');
 const db = require('../model/queries/index');
 
 exports.post = (request, response) => {
