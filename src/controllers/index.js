@@ -12,7 +12,7 @@ const queries = require('../model/queries');
 
 // adding routes
 router.get('/', home.get);
-router.get('/library', library.get);
+router.use('/library', library.get);
 router.post('/filter-language', (req, res) => {
     res.redirect(`/library/${req.body.language}`);
 });
