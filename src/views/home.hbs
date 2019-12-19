@@ -1,5 +1,5 @@
 <form aria-label="Submit resources form" method="POST" action="/resource" class="add-form">
-    <select name="language" required>
+    <select aria-label="input language" name="language" required>
         <option value="" class="dropdown" disabled selected>Select a language</option>
         <option value="CSS">CSS</option>
         <option value="EXPRESS">EXPRESS</option>
@@ -10,9 +10,8 @@
         <option value="REACT">REACT</option>
         <option value="SQL">SQL</option>
     </select>
-    </select>
-    Title: <input type="text" name="title" required><br>
-    Link: <input type="text" name="link" required><br>
-    Description: <input type="text" name="description" required><br>
+    <label>Title: <input type="text" name="title" required></label><br>
+    <label>Link: <input type="text" name="link" required></label><br>
+    <label>Description: <input type="text" name="description" required></label><br>
     <button type="submit">Add</button>
 </form>
