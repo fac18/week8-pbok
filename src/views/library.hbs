@@ -21,4 +21,16 @@
         <th>Link</th>
     </tr>
     <!-- Here we create a tr and td for each database entry-->
+
+{{#each tableRows}}
+<tr>
+   <td>{{language}}</td>
+   <td>{{title}}</td>
+   <td>{{description}}</td>
+   <td>{{link}}</td>
+ </tr>
+{{/each}}
+
 </table>
+
+
