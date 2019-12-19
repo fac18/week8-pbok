@@ -1,18 +1,16 @@
-
 const express = require("express");
 const path = require("path");
 const router = express.Router();
+const home = require('./home');
+const library = require('./library');
+const resource = require('./resource');
+const errors = require('./errors');
 
+router.get('/', home.get);
+router.get('/library', library.get);
+router.post('/resource', resource.post);
 
-// create routes for home and library
-// create error handling routes
-
-// const fruit = require("./fruit");
-// const error = require("./error");
-
-// router.get("/fruit", fruit.get);
-// router.post("/fruit", fruit.post);
-// router.use(error.client);
-// router.use(error.server);
+router.use(errors.client);
+router.use(errors.server);
 
 module.exports = router;
