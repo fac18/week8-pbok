@@ -20,6 +20,18 @@ test("Test library route", t => {
         .end((err, res) => {
             t.error(err, 'Error is null');
             t.equal(res.statusCode, 200, 'Should return 200');
+            t.equals(typeof res, 'object', 'Result should be an object');
+            t.end();
+        });
+});
+
+test("Test 404 error is being served correctly", t => {
+    request(app)
+        .get("/blah")
+        .expect(404)
+        .end((err, res) => {
+            t.error(err, "Error is null");
+            t.equals(404, res.statusCode, "Should return 404");
             t.end();
         });
 });
