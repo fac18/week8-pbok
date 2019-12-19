@@ -1,21 +1,33 @@
 const db = require('../db_connection');
 
-const getAll = () => db.query(`SELECT * FROM resources`);
+const getAll = cb => {
+  db.query(`SELECT * FROM resources`,
+  (err, result) => {
+    if (err) return cb(err);
+    cb(null, result.rows);
+  });
+}
 
-const filterByJavaScript = () => db.query(`SELECT * FROM resources WHERE language='JavaScript'`);
-const filterByCss = () => db.query(`SELECT * FROM resources WHERE language='CSS'`);
-const filterByHtml = () => db.query(`SELECT * FROM resources WHERE language='HTML'`);
+const filterByLanguage = (language, cb) => {
+  db.query(`SELECT * FROM resources WHERE language=$1`,
+  [language],
+  (err, result) => {
+    if (err) return cb(err);
+    cb(null, result.rows);
+  });
+}
 
-const addResource = resource => {
-  const  { title, language, description, link } = resource;
-  return db.query(`INSERT INTO resources(title, language, description, link) VALUES ($1, $2, $3, $4)`
-);
+const addResource = (title, language, description, link, cb) => {
+  db.query(`INSERT INTO resources(title, language, description, link) VALUES ($1, $2, $3, $4)`,
+  [title, language, description, link],
+  (err, result) => {
+    if (err) return cb(err);
+    cb(null, result.rows);
+  });
 }
 
 module.exports = {
   getAll,
-  filterByJavaScript,
-  filterByCss,
-  filterByHtml,
+  filterByLanguage,
   addResource,
 };
