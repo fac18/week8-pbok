@@ -1,10 +1,19 @@
+const {
+    getAll,
+    filterByLanguage
+  } = require('../model/queries')
+
+
 exports.get = (request, response) => {
-    response.render('library');
+    getAll((err, res) => {
+        const tableRows = res;
+        response.render('library', { tableRows });
+    })
 };
 
 exports.filterLanguage = (request, response) => {
     let language = request.params.language;
-    getData.getFilteredLang(language, (err, res) => {
+    filterByLanguage(language, (err, res) => {
         if (err) console.log(err);
         console.log(res);
     })
