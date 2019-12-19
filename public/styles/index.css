@@ -1,1 +1,73 @@
 /* index.css */
+
+:root {
+spacing variables: golden ratio */
+  --space-xs: 0.382rem;
+  --space-s: 0.618rem;
+  --space-m: 1rem;
+  --space-l: 1.618rem;
+  --space-xl: 2.618rem;
+  --space-xxl: 4.236rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../librarybg.jpeg");
+  background-size: cover;
+
+  justify-content: center;
+  border: black solid;
+
+  font-size: var(--space-l);
+  font-weight: bold;
+}
+
+header {
+  font-family: 'Almendra SC', serif;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  border: black solid;
+  margin: 3rem;
+}
+
+.add-form {
+    /* font-family: 'Major Mono Display', monospace; */
+  display: flex;
+  flex-direction: column;
+  border: black solid;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 5rem;
+  padding: 1rem;
+
+  font-family: 'Cutive Mono', monospace;
+}
+
+.dropdown {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.table {
+  font-size: var(--space-m);
+  font-family: 'Cutive Mono', monospace;
+  font-weight: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  border: black solid;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 5rem;
+  padding: 1rem;
+}
+
+.column {
+  border: black solid;
+  font-size: var(--space-l);
+}
+.table-row {
+  border: black solid;
+}
+.table-data {
+border: black solid;
+}
