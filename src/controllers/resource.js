@@ -1,9 +1,9 @@
 // require the getData and getPost from queries 
 
 exports.post = (request, response) => {
-    console.log(request.body);
+    // console.log(request.body);
     let { title, language, description, link } = request.body;
-    postData(title, language, description, link, (err, res) => {
+    addResource(title, language, description, link, (err, res) => {
         if (err) {
             throw err;
         }
