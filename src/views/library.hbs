@@ -1,15 +1,15 @@
 <form method="POST" action="/filter-language">
     <select name="language">
         <option value="" disabled selected>Select a language</option>
-        <option value="">See all</option>
-        <option value="css">CSS</option>
-        <option value="express">EXPRESS</option>
-        <option value="handlebars">HANDLEBARS</option>
-        <option value="html">HTML</option>
-        <option value="js">JAVASCRIPT</option>
-        <option value="node">NODE</option>
-        <option value="react">REACT</option>
-        <option value="sql">SQL</option>
+        <option value="">ALL LANGUAGES</option>
+        <option value="CSS">CSS</option>
+        <option value="EXPRESS">EXPRESS</option>
+        <option value="HANDLEBARS">HANDLEBARS</option>
+        <option value="HTML">HTML</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+        <option value="NODE">NODE</option>
+        <option value="REACT">REACT</option>
+        <option value="SQL">SQL</option>
     </select>
     <button type="submit">Filter</button>
 </form>
@@ -20,15 +20,14 @@
         <th>Description</th>
         <th>Link</th>
     </tr>
-    <!-- Here we create a tr and td for each database entry-->
 
 {{#each tableRows}}
-<tr>
-   <td>{{language}}</td>
-   <td>{{title}}</td>
-   <td>{{description}}</td>
-   <td>{{link}}</td>
- </tr>
+    <tr>
+        <td>{{language}}</td>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>{{link}}</td>
+    </tr>
 {{/each}}
 
 </table>
