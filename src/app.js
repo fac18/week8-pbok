@@ -15,11 +15,7 @@ app.engine(
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
-<<<<<<< HEAD
     defaultLayout: 'main'
-=======
-    defaultLayout: 'main',
->>>>>>> master
   })
 );
 
