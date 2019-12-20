@@ -36,7 +36,7 @@
 
 ## User Flow
 
-![](https://i.imgur.com/3dd2qri.jpg )
+![](https://i.imgur.com/3dd2qri.jpg)
 
 ## Design
 
@@ -50,7 +50,79 @@
 
 ## Server Architecture
 
-![](https://i.imgur.com/o0pik7i.png =200x500)
+![](https://i.imgur.com/o0pik7i.png=200x500)
+
+## Testing
+
+![](https://i.imgur.com/I1gfPT1.png)
+
+## Routes
+
+![](https://i.imgur.com/xpgAqQu.png)
+
+
+## Controller
+
+```javascript
+// post request to add new resource to database library
+exports.post = (request, response) => {
+    let { title, language, description, link } = request.body;
+    db.addResource(title, language, description, link, (err, res) => {
+        if (err) {
+            throw err;
+        }
+})
+response.redirect('/');
+};)
+```
+
+## Filtering
+
+```javascript
+
+// post request to add new resource to database library
+exports.post = (request, response) => {
+    let { title, language, description, link } = request.body;
+    db.addResource(title, language, description, link, (err, res) => {
+        if (err) {
+            throw err;
+        }
+})
+response.redirect('/');
+};)
+
+const filterByLanguage = (language, cb) => {
+  db.query(`SELECT * FROM resources WHERE language=$1`,
+  [language],
+  (err, result) => {
+    if (err) return cb(err);
+    cb(null, result.rows);
+  });
+}
+
+```
+
+## Queries
+
+```javascript
+
+const addResource = (title, language, description, link, cb) => {
+  db.query(`INSERT INTO resources(title, language, description, link) VALUES ($1, $2, $3, $4)`,
+  [title, language, description, link],
+  (err, result) => {
+    if (err) return cb(err);
+    cb(null, result);
+  });
+}
+
+module.exports = {
+  getAll,
+  filterByLanguage,
+  addResource
+};
+
+```
+
 
 ## Things we've achieved:
 
@@ -59,3 +131,9 @@
     - Filtering options
     - Adding nice tests (even db ones)
     - Modularize our code (a bit...)
+
+## What we would change:
+
+    - Create and use custom helpers
+    - Do more tests
+    - Keep the team work (woohoo!)
