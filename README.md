@@ -89,6 +89,7 @@
 ## Controller
 
 ```javascript
+
 // post request to add new resource to database library
 exports.post = (request, response) => {
     let { title, language, description, link } = request.body;
@@ -104,14 +105,16 @@ response.redirect('/');
 
 ## Filtering
 
-```javascript=
+```javascript
+
 router.post('/filter-language', (req, res) => {
     res.redirect(`/library/${req.body.language}`);
 });
 router.get('/library/:language', library.filterLanguage);
 ```
 
-```javascript=
+```javascript
+
 exports.filterLanguage = (request, response) => {
     let language = request.params.language;
     filterByLanguage(language, (err, res) => {
@@ -133,7 +136,8 @@ const filterByLanguage = (language, cb) => {
 }
 ```
 
-```javascript=
+```javascript
+
 {{#each filterRows}}
     <tr>
         <td class="table-data">{{language}}</td>
@@ -173,8 +177,7 @@ module.exports = {
     - Mobbing + working as a team
     - No HTML pages at all
     - Filtering options
-    - Adding nice tests (even db ones)
-    - Modularize our code (a bit...)
+    - Modularise our code (a bit...)
 
 ---
 
