@@ -125,7 +125,8 @@ exports.filterLanguage = (request, response) => {
 };
 ```
 
-```javascript=
+```javascript
+
 const filterByLanguage = (language, cb) => {
   db.query(`SELECT * FROM resources WHERE language=$1`,
   [language],
