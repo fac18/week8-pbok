@@ -1,7 +1,7 @@
 # FAC BiblioTech
 ### by PBOK
 
-![](https://media.giphy.com/media/Y0VRqjLynLvV7kr6hp/giphy.gif =200x) ![](https://media.giphy.com/media/Us6H6fWsXwWc/giphy.gif =200x) ![](https://media.giphy.com/media/iOMSfTen1pZUPTx2QF/giphy.gif =260x)
+![](https://media.giphy.com/media/Y0VRqjLynLvV7kr6hp/giphy.gif) ![](https://media.giphy.com/media/Us6H6fWsXwWc/giphy.gif) ![](https://media.giphy.com/media/iOMSfTen1pZUPTx2QF/giphy.gif)
 
 ---
 
@@ -82,7 +82,7 @@
 
 ## SERVER ARCHITECTURE
 
-![](https://i.imgur.com/o0pik7i.png =200x500)
+![](https://i.imgur.com/o0pik7i.png)
 
 ---
 
