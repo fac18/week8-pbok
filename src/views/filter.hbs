@@ -11,9 +11,9 @@
         <option value="REACT">REACT</option>
         <option value="SQL">SQL</option>
     </select>
-    <button type="submit">Filter</button>
+    <button class="filtering" type="submit">Filter</button>
 </form>
-<table class="table">
+<table class="table" style="overflow-x:auto;">
     <tr class="table-row">
         <th class="column">Language</th>
         <th class="column">Title</th>
@@ -26,7 +26,7 @@
         <td class="table-data">{{language}}</td>
         <td class="table-data">{{title}}</td>
         <td class="table-data">{{description}}</td>
-        <td class="table-data">{{link}}</td>
+        <td class="table-data"><a href="" alt="link to resource" target="_blank">{{link}}</a></td>
     </tr>
 {{/each}}
 
