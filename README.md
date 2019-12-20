@@ -104,19 +104,25 @@ response.redirect('/');
 
 ## Filtering
 
-```javascript
+```javascript=
+router.post('/filter-language', (req, res) => {
+    res.redirect(`/library/${req.body.language}`);
+});
+router.get('/library/:language', library.filterLanguage);
+```
 
-// post request to add new resource to database library
-exports.post = (request, response) => {
-    let { title, language, description, link } = request.body;
-    db.addResource(title, language, description, link, (err, res) => {
-        if (err) {
-            throw err;
-        }
-})
-response.redirect('/');
-};)
+```javascript=
+exports.filterLanguage = (request, response) => {
+    let language = request.params.language;
+    filterByLanguage(language, (err, res) => {
+        if (err) console.log(err);
+        const filterRows = res;
+        response.render("filter", { filterRows });
+    })
+};
+```
 
+```javascript=
 const filterByLanguage = (language, cb) => {
   db.query(`SELECT * FROM resources WHERE language=$1`,
   [language],
@@ -125,7 +131,17 @@ const filterByLanguage = (language, cb) => {
     cb(null, result.rows);
   });
 }
+```
 
+```javascript=
+{{#each filterRows}}
+    <tr>
+        <td class="table-data">{{language}}</td>
+        <td class="table-data">{{title}}</td>
+        <td class="table-data">{{description}}</td>
+        <td class="table-data"><a href="{{link}}" alt="link to resource" target="_blank" title="{{link}}">{{link}}</a></td>
+    </tr>
+{{/each}}
 ```
 
 ---
