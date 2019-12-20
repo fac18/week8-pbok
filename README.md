@@ -1,5 +1,6 @@
-# Week 8 Project
+# Week 8 Project - FAC BiblioTech
 ### Beth - Judith - Kin - Renata
+### by PBOK
 
 ---
 
@@ -38,6 +39,11 @@
 
 ---
 
+## Accessibility
+
+![](https://i.imgur.com/s7Yf8Ld.png)
+
+---
 ## Schema
 
 ![](https://i.imgur.com/Sz6dxdQ.png)
