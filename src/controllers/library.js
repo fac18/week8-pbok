@@ -3,7 +3,7 @@ const {
     filterByLanguage
   } = require('../model/queries')
 
-
+// get list of resources from library database
 exports.get = (request, response) => {
     getAll((err, res) => {
         const tableRows = res;
@@ -11,6 +11,7 @@ exports.get = (request, response) => {
     })
 };
 
+// filter list of resources from library database by language
 exports.filterLanguage = (request, response) => {
     let language = request.params.language;
     filterByLanguage(language, (err, res) => {
