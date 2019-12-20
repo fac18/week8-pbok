@@ -6,9 +6,10 @@
   "scripts": {
     "test": "NODE_ENV=test node tests/database.tests.js",
     "testroutes": "node ./tests/routes.test.js | tap-spec",
-    "testdb": "node tests/database.test.js | tap-spec",
+    "start": "nodemon src/index.js",
     "alltest": "tape tests/* | tap-spec",
-    "start": "nodemon src/index.js"
+    "testdb": "node tests/database.test.js | tap-spec",
+    "coverage": "NODE_ENV=test nyc tape ./tests/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "codecov": "^3.6.1",
     "nock": "^11.7.0",
     "nodemon": "^2.0.2",
+    "nyc": "^14.1.1",
     "supertest": "^4.0.2",
     "tap-spec": "^5.0.0",
     "tape": "^4.12.0"
