@@ -13,9 +13,13 @@
 * run ```npm install```
 * ask us for the super secret env deets
 
+---
+
 ## Goals
 - [x] Set up an Express server and discover the awesomeness of Handlebars! <br>
 - [x] Spend time considering how to format your layouts, partials and helper functions.
+
+---
 
 ## Important elements:
 
@@ -26,40 +30,55 @@
 - [x] Use Heroku to host the app and the database<br>
 - [x] Include ES6 syntax on the server
 
+---
+
 ## Wireframes
 
 ![](https://i.imgur.com/0nqTAPa.jpg)
+
+---
 
 ## Schema
 
 ![](https://i.imgur.com/Sz6dxdQ.png)
 
+---
+
 ## User Flow
 
 ![](https://i.imgur.com/3dd2qri.jpg)
+
+---
 
 ## Design
 
 ![](https://i.imgur.com/H2eRafz.jpg)
 
+---
 
 ## MVC Architecture
 
 ![](https://i.imgur.com/oMusr3x.png)
 
+---
 
 ## Server Architecture
 
 ![](https://i.imgur.com/o0pik7i.png=200x500)
 
+---
+
 ## Testing
 
 ![](https://i.imgur.com/I1gfPT1.png)
+
+---
 
 ## Routes
 
 ![](https://i.imgur.com/xpgAqQu.png)
 
+---
 
 ## Controller
 
@@ -75,6 +94,7 @@ exports.post = (request, response) => {
 response.redirect('/');
 };)
 ```
+---
 
 ## Filtering
 
@@ -102,6 +122,8 @@ const filterByLanguage = (language, cb) => {
 
 ```
 
+---
+
 ## Queries
 
 ```javascript
@@ -122,7 +144,7 @@ module.exports = {
 };
 
 ```
-
+---
 
 ## Things we've achieved:
 
@@ -131,6 +153,8 @@ module.exports = {
     - Filtering options
     - Adding nice tests (even db ones)
     - Modularize our code (a bit...)
+
+---
 
 ## What we would change:
 
