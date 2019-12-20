@@ -13,6 +13,7 @@
 * clone repo
 * run ```npm install```
 * ask us for the super secret env deets
+* run ```npm start```
 
 ---
 
