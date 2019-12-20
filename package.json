@@ -6,6 +6,8 @@
   "scripts": {
     "test": "NODE_ENV=test node tests/database.tests.js",
     "testroutes": "node ./tests/routes.test.js | tap-spec",
+    "testdb": "node tests/database.test.js | tap-spec",
+    "alltest": "tape tests/* | tap-spec",
     "start": "nodemon src/index.js"
   },
   "repository": {
