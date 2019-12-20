@@ -1,6 +1,6 @@
 <form method="POST" action="/filter-language" class="filter-form">
-    <select name="language">
-        <option value="" disabled selected>Select a language</option>
+    <select arial-label="filter library by language" name="language" required>
+        <option value="" disabled="disabled" selected="selected">SELECT A LANGUAGE</option>
         <option value="">ALL LANGUAGES</option>
         <option value="CSS">CSS</option>
         <option value="EXPRESS">EXPRESS</option>
@@ -14,7 +14,7 @@
     <button type="submit">Filter</button>
 </form>
 <table class="table">
-    <tr class"table-row">
+    <tr class="table-row">
         <th class="column">Language</th>
         <th class="column">Title</th>
         <th class="column">Description</th>

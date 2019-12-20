@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 const router = express.Router();
 
 // importing route controllers
@@ -7,8 +6,6 @@ const home = require('./home');
 const library = require('./library');
 const resource = require('./resource');
 const errors = require('./errors');
-const queries = require('../model/queries');
-
 
 // adding routes
 router.get('/', home.get);
