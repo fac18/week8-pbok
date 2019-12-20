@@ -1,6 +1,6 @@
-<form method="POST" action="/filter-language">
-    <select name="language">
-        <option value="" disabled selected>Select a language</option>
+<form method="POST" action="/filter-language" class="filter-form">
+    <select arial-label="filter library by language" name="language" required>
+        <option value="" disabled="disabled" selected="selected">SELECT A LANGUAGE</option>
         <option value="">ALL LANGUAGES</option>
         <option value="CSS">CSS</option>
         <option value="EXPRESS">EXPRESS</option>
@@ -13,20 +13,20 @@
     </select>
     <button type="submit">Filter</button>
 </form>
-<table>
-    <tr>
-        <th>Language</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Link</th>
+<table class="table">
+    <tr class="table-row">
+        <th class="column">Language</th>
+        <th class="column">Title</th>
+        <th class="column">Description</th>
+        <th class="column">Link</th>
     </tr>
 
 {{#each filterRows}}
     <tr>
-        <td>{{language}}</td>
-        <td>{{title}}</td>
-        <td>{{description}}</td>
-        <td>{{link}}</td>
+        <td class="table-data">{{language}}</td>
+        <td class="table-data">{{title}}</td>
+        <td class="table-data">{{description}}</td>
+        <td class="table-data">{{link}}</td>
     </tr>
 {{/each}}
 
