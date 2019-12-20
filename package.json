@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test node tests/database.tests.js",
+    "testroutes": "node ./tests/routes.test.js | tap-spec",
     "start": "nodemon src/index.js"
   },
   "repository": {
