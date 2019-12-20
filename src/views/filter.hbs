@@ -1,6 +1,6 @@
-<form method="POST" action="/filter-language">
-    <select name="language" class="drop-it">
-        <option value="" disabled selected>Select a language</option>
+<form method="POST" action="/filter-language" class="filter-form">
+    <select arial-label="filter library by language" name="language" required>
+        <option value="" disabled="disabled" selected="selected">SELECT A LANGUAGE</option>
         <option value="">ALL LANGUAGES</option>
         <option value="CSS">CSS</option>
         <option value="EXPRESS">EXPRESS</option>
@@ -14,7 +14,7 @@
     <button class="filtering" type="submit">Filter</button>
 </form>
 <table class="table" style="overflow-x:auto;">
-    <tr class"table-row">
+    <tr class="table-row">
         <th class="column">Language</th>
         <th class="column">Title</th>
         <th class="column">Description</th>
@@ -26,7 +26,11 @@
         <td class="table-data">{{language}}</td>
         <td class="table-data">{{title}}</td>
         <td class="table-data">{{description}}</td>
+<<<<<<< HEAD
         <td class="table-data"><a href="" alt="link to resource" target="_blank">{{link}}</a></td>
+=======
+        <td class="table-data">{{link}}</td>
+>>>>>>> master
     </tr>
 {{/each}}
 
