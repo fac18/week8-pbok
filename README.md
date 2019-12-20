@@ -20,3 +20,11 @@
 ## Schema
 
 ![](https://i.imgur.com/Sz6dxdQ.png)
+
+## User Flow
+
+![](https://i.imgur.com/3dd2qri.jpg )
+
+### Design
+
+![](https://i.imgur.com/H2eRafz.jpg)
