@@ -1,8 +1,7 @@
 const {
     getAll,
     filterByLanguage
-  } = require('../model/queries')
-
+  } = require('../model/queries')  
 
 exports.get = (request, response) => {
     getAll((err, res) => {
