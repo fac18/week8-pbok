@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/fac18/week8-pbok#readme",
   "devDependencies": {
-    "codecov": "^3.6.1",
+    "codecov": "^3.6.5",
     "nock": "^11.7.0",
     "nodemon": "^2.0.2",
     "nyc": "^14.1.1",
