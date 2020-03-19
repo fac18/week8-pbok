@@ -1,5 +1,5 @@
 <form method="POST" action="/filter-language" class="filter-form">
-    <select aria-label="filter library by language" name="language" required>
+    <select aria-label="filter library by language" name="language" required class="drop-it">
         <option value="" disabled="disabled" selected="selected">SELECT A LANGUAGE</option>
         <option value="">ALL LANGUAGES</option>
         <option value="CSS">CSS</option>
@@ -11,7 +11,7 @@
         <option value="REACT">REACT</option>
         <option value="SQL">SQL</option>
     </select>
-    <button class="filtering" type="submit">Filter</button>
+    <button class="filtering" type="submit">Filter <i class="fas fa-filter"></i></button>
 </form>
 <table class="table" style="overflow-x:auto;">
     <tr class="table-row">
@@ -21,13 +21,14 @@
         <th class="column">Link</th>
     </tr>
 
-{{#each tableRows}}
+    {{#each tableRows}}
     <tr>
         <td class="table-data">{{language}}</td>
         <td class="table-data">{{title}}</td>
         <td class="table-data">{{description}}</td>
-        <td class="table-data"><a href="{{link}}" alt="link to resource" target="_blank" title="{{link}}"></a>{{link}}</a></td>
+        <td class="table-data"><a href="{{link}}" alt="link to resource" target="_blank"
+                title="{{link}}"></a>{{link}}</a></td>
     </tr>
-{{/each}}
+    {{/each}}
 
 </table>
