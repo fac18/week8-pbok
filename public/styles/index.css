@@ -111,6 +111,15 @@ input {
 
 .table-data {
   border: black solid;
+  padding: 0.4rem;
+}
+
+.links {
+  color: #000000;
+}
+
+.links:hover {
+  color: #7eafe0;
 }
 
 .column {
