@@ -1,17 +1,22 @@
-<form aria-label="Submit resources form" method="POST" action="/resource" class="add-form">
-    <select aria-label="input language" name="language" required class="drop-it">
-        <option value="" class="dropdown" disabled selected>Select a language</option>
-        <option value="CSS">CSS</option>
-        <option value="EXPRESS">EXPRESS</option>
-        <option value="HANDLEBARS">HANDLEBARS</option>
-        <option value="HTML">HTML</option>
-        <option value="JAVASCRIPT">JAVASCRIPT</option>
-        <option value="NODE">NODE</option>
-        <option value="REACT">REACT</option>
-        <option value="SQL">SQL</option>
-    </select>
-    <label>Title: <input type="text" name="title" required></label><br>
-    <label>Link: <input type="url" name="link" required></label><br>
-    <label>Description: <input type="text" name="description" required></label><br>
-    <button type="submit" class="add-button"><i class="fas fa-plus-circle"></i>Add</button>
-</form>
+<section>
+    <form aria-label="Submit resources form" method="POST" action="/resource" class="add-form">
+        <select aria-label="input language" name="language" required class="drop-it">
+            <option value="" class="dropdown" disabled selected> Select a language</option>
+            <option value="CSS">CSS</option>
+            <option value="EXPRESS">EXPRESS</option>
+            <option value="HANDLEBARS">HANDLEBARS</option>
+            <option value="HTML">HTML</option>
+            <option value="JAVASCRIPT">JAVASCRIPT</option>
+            <option value="NODE">NODE</option>
+            <option value="REACT">REACT</option>
+            <option value="SQL">SQL</option>
+        </select>
+        <label>Title:</label><br>
+        <input type="text" name="title" required>
+        <label>Link:</label><br>
+        <input type="url" name="link" required>
+        <label>Description: </label><br>
+        <input type="text" name="description" required>
+        <button type="submit" class="add-button">Add a new resource <i class="fas fa-plus-circle"></i></button>
+    </form>
+</section>
