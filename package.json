@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "env2": "^2.2.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "pg": "^7.15.0",
     "serve-favicon": "^2.5.0"
